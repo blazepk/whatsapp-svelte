@@ -1,4 +1,4 @@
-<div class="search-bar px-4 py-2 w-full">
+<div class="search-bar sticky top-0 px-4 py-2 w-full">
 	<form method="GET">
 		<div class="relative text-gray-600 focus-within:text-gray-200">
 			<span class="absolute inset-y-0 left-0 flex items-center pl-2">
