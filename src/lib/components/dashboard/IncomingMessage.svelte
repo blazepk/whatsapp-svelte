@@ -1,3 +1,9 @@
+<script lang="ts">
+	export let message: string;
+	export let timeStamp: Date;
+	const time = timeStamp.toLocaleTimeString();
+</script>
+
 <div class="flex">
 	<span
 		><svg
@@ -14,7 +20,8 @@
 	<div
 		class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2"
 	>
-		Hey Pal! I'm doing good, how have you been? Cold at the moment aye!
+		<span class="text-lg">{message}</span>
+		<span class="text-xs inline-block">{time}</span>
 	</div>
 </div>
 

@@ -1,9 +1,17 @@
+<script lang="ts">
+	export let message: string;
+	export let timeStamp: Date;
+	const time = timeStamp.toLocaleTimeString();
+</script>
+
 <div class="flex justify-end">
 	<div
 		class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2"
 	>
-		Hey! Thought I'd reach out to say how are you? 😊 <span class="text-xs inline-block"
-			>13:00 <img
+		{message}
+		<span class="text-xs inline-block"
+			>{time}
+			<img
 				src="https://www.flaticon.com/svg/vstatic/svg/60/60727.svg?token=exp=1611581819~hmac=ebbc941635810f019c46f5b4f9b1ff89"
 				class="w-4 h-4 inline -mt-1 ml-2"
 				alt=""

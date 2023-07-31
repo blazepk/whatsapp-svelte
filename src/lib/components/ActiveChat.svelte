@@ -1,21 +1,24 @@
 <script lang="ts">
+	import Message from './dashboard/Message.svelte';
 	import { onMount } from 'svelte';
 	import ChatBottom from './dashboard/ChatBottom.svelte';
 	import ChatTop from './dashboard/ChatTop.svelte';
-	import IncomingMessage from './dashboard/IncomingMessage.svelte';
-	import MyMessage from './dashboard/MyMessage.svelte';
 
+	import { SampleMessages } from './sampleMessages';
 	onMount(() => {
 		const objDiv: any = document.getElementById('messageBody');
+
 		objDiv.scrollTop = objDiv.scrollHeight;
+		// console.log(objDiv.scrollTop, objDiv.scrollHeight);
 	});
 </script>
 
 <main id="messageBody" class="w-full bg-whatsapp relative overflow-y-auto">
 	<ChatTop />
-	<div class="main-messages h-full block px-4 py-3">
-		<MyMessage />
-		<IncomingMessage />
+	<div class="main-messages h-full flex flex-col items-between justify-end px-4 py-3">
+		{#each SampleMessages as messageData}
+			<Message {messageData} />
+		{/each}
 	</div>
 	<div class="main-footer sticky bottom-0 right-0 left-0 text-gray-400">
 		<ChatBottom />

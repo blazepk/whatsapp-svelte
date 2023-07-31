@@ -69,6 +69,25 @@
 </aside>
 
 <style>
+	/* width */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #131c21;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #394045;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 	aside {
 		width: 40rem;
 	}
